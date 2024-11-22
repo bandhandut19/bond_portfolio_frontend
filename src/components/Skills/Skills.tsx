@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { SkillBar } from "react-skillbars";
 import { TSkill } from "../utils/types";
 const Skills = () => {
-  const [skills, setSkills] = useState([]);
   const [softSkills, setSoftSkills] = useState([]);
   const [techSkills, setTechSkills] = useState([]);
   useEffect(() => {
@@ -15,7 +14,7 @@ const Skills = () => {
           "http://localhost:5000/portfolio/skills/skill"
         );
         const skills = res?.data?.data;
-        setSkills(skills);
+
         const soft = skills.filter(
           (skill: TSkill) => skill.category === "soft"
         );
