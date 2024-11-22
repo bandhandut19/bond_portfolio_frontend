@@ -24,7 +24,7 @@ const DashBoard = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/portfolio/skills/skill",
+        "https://bond-porfolio-backend.vercel.app/portfolio/skills/skill",
         data
       );
       console.log(res);
@@ -38,7 +38,7 @@ const DashBoard = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/portfolio/projects/project",
+        "https://bond-porfolio-backend.vercel.app/portfolio/projects/project",
         data
       );
       console.log(res);
@@ -52,7 +52,7 @@ const DashBoard = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/portfolio/blogs/blog",
+        "https://bond-porfolio-backend.vercel.app/portfolio/blogs/blog",
         data
       );
       console.log(res);

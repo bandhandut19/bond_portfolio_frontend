@@ -11,7 +11,7 @@ const Skills = () => {
     const skill = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/portfolio/skills/skill"
+          "https://bond-porfolio-backend.vercel.app/portfolio/skills/skill"
         );
         const skills = res?.data?.data;
 
