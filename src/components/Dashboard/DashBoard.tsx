@@ -80,7 +80,7 @@ const DashBoard = () => {
                 placeholder="Enter Skill name"
                 className="input input-bordered"
                 required
-                {...handleSkillRegister("name")}
+                {...handleSkillRegister("type")}
               />
             </div>
             <div className="form-control">
