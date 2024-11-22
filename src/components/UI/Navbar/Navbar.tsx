@@ -25,7 +25,7 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <li>
+            {/* <li>
               <Link to={"/about"}>
                 {" "}
                 <span className="text-xl">About</span>
@@ -35,14 +35,19 @@ const Navbar = () => {
               <Link to={"/contact"}>
                 <span className="text-xl">Contact</span>
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
-        <a className="btn btn-ghost text-4xl font-extrabold">Bondon</a>
+        <Link
+          to={"/"}
+          className="btn btn-ghost text-4xl font-extrabold text-center"
+        >
+          Bondon
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
+          {/* <li>
             <Link to={"/about"}>
               {" "}
               <span className="text-xl">About</span>
@@ -52,7 +57,7 @@ const Navbar = () => {
             <Link to={"/contact"}>
               <span className="text-xl">Contact</span>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
       <div className="navbar-end"></div>
