@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Banner = () => {
   return (
     <div className="grid lg:grid-cols-2  lg:gap-2 gap-10 items-center justify-center lg:pt-20 pt-10 text-[#E4E0E1]">
@@ -15,7 +17,14 @@ const Banner = () => {
           <span>Mern Stack Developer</span>
         </div>
         <div className="bg-[#AB886D] cursor-pointer lg:rounded-s-badge animate-pulse text-center lg:text-2xl font-bold text-xl py-2">
-          <span>Download CV</span>
+          <Link
+            to={
+              "https://drive.google.com/file/d/1YBKUXB6OxOY-_IkzlS3TUmSGZOScyhrJ/view?usp=sharing"
+            }
+            target="_blank"
+          >
+            <span>Download CV</span>
+          </Link>
         </div>
       </div>
     </div>
