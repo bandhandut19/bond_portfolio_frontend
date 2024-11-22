@@ -89,7 +89,7 @@ import { SkillBar } from "react-skillbars";
 const Skills = () => {
   return (
     <div className="min-h-screen pb-20">
-      <div className="bg-[#AB886D] text-center text-5xl py-10 h-1/4 rounded-b-full text-[#E4E0E1] pt-10 mb-10">
+      <div className="bg-[#AB886D] text-center lg:text-5xl text-2xl py-10 h-1/4 rounded-b-full text-[#E4E0E1] pt-10 mb-10">
         <span className="font-extrabold">Skills</span>
       </div>
       <div className="grid gap-10  lg:grid-cols-2">
