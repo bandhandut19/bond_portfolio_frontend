@@ -1,6 +1,7 @@
-const HorizontalGap = () => {
+const HGap = () => {
   return (
     <div>
+      {" "}
       <hr />
       <hr />
       <hr />
@@ -11,4 +12,4 @@ const HorizontalGap = () => {
   );
 };
 
-export default HorizontalGap;
+export default HGap;
