@@ -1,6 +1,7 @@
 import HGap from "../../utils/HGap";
 import Banner from "../Banner/Banner";
 import Education from "../Education/Education";
+import Skills from "../Skills/Skills";
 
 const Home = () => {
   return (
@@ -8,6 +9,9 @@ const Home = () => {
       <Banner></Banner>
       <HGap></HGap>
       <Education></Education>
+      <HGap></HGap>
+      <Skills></Skills>
+      <HGap></HGap>
     </div>
   );
 };

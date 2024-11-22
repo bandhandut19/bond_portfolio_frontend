@@ -10,7 +10,7 @@ const Education = () => {
       <div className="bg-[#AB886D] text-center text-5xl py-10 h-1/4 rounded-b-full text-[#E4E0E1] pt-10 mb-10">
         <span className="font-extrabold">Education</span>
       </div>
-      <div className="min-h-screen">
+      <div className="min-h-screen pb-20">
         <div>
           <VerticalTimeline>
             <VerticalTimelineElement
