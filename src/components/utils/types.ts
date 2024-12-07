@@ -1,4 +1,5 @@
 export type TSkill = {
+  _id?: string;
   type: string;
   category: "soft" | "tech";
   description?: string;

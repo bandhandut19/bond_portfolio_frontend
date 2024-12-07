@@ -2,6 +2,7 @@
 import { useForm } from "react-hook-form";
 import { TBlog, TProject, TSkill } from "../utils/types";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const DashBoard = () => {
   const {
@@ -19,12 +20,13 @@ const DashBoard = () => {
     register: blogregister,
     reset: blogreset,
   } = useForm<TBlog>();
+  const navigate = useNavigate();
   const handleAddSkills = async (data: TSkill) => {
     console.log(data);
 
     try {
       const res = await axios.post(
-        "https://bond-porfolio-backend.vercel.app/portfolio/skills/skill",
+        "http://localhost:5000/portfolio/skills/skill",
         data
       );
       console.log(res);
@@ -33,12 +35,17 @@ const DashBoard = () => {
     }
     handleskillreset();
   };
+
+  const handleViewAllSkill = () => {
+    console.log("clicked");
+    navigate("/adminpanel/skill");
+  };
   const handleAddProjects = async (data: TProject) => {
     console.log(data);
 
     try {
       const res = await axios.post(
-        "https://bond-porfolio-backend.vercel.app/portfolio/projects/project",
+        "http://localhost:5000/portfolio/projects/project",
         data
       );
       console.log(res);
@@ -52,7 +59,7 @@ const DashBoard = () => {
 
     try {
       const res = await axios.post(
-        "https://bond-porfolio-backend.vercel.app/portfolio/blogs/blog",
+        "http://localhost:5173/portfolio/blogs/blog",
         data
       );
       console.log(res);
@@ -67,6 +74,7 @@ const DashBoard = () => {
         BOND PORTFOLIO ADMIN PANEL
       </h1>
       <div className="grid lg:grid-cols-2 gap-5 pt-10 px-5">
+        {/* skills */}
         <div className="bg-[#E4E0E1] pb-20 px-5">
           <h1 className="text-2xl font-bold text-center py-2">Add Skills</h1>
 
@@ -119,16 +127,23 @@ const DashBoard = () => {
                 {...handleSkillRegister("level")}
               />
             </div>
-            <div className="form-control mt-6">
+            <div className="form-control mt-6 flex gap-3">
               <button
                 type="submit"
                 className="btn  bg-[#AB886D] border-none outline-none "
               >
                 <span className="text-black">Add Skill</span>
               </button>
+              <button
+                onClick={handleViewAllSkill}
+                className="btn bg-[#AB886D] border-none outline-none  hover:bg-black"
+              >
+                <span className="text-white">View All Skills</span>
+              </button>
             </div>
           </form>
         </div>
+        {/* blogs */}
         <div className="bg-[#E4E0E1] pb-20 px-5">
           <h1 className="text-2xl text-center py-2 font-bold">Add Blogs</h1>
 
@@ -186,11 +201,12 @@ const DashBoard = () => {
                 type="submit"
                 className="btn  bg-[#AB886D] border-none outline-none "
               >
-                <span className="text-black">Add Project</span>
+                <span className="text-black">Add Blog</span>
               </button>
             </div>
           </form>
         </div>
+        {/* projects */}
         <div className="bg-[#E4E0E1] pb-20 px-5">
           <h1 className="text-2xl text-center py-2 font-bold">Add Projects</h1>
           <form onSubmit={handleprojectsubmit(handleAddProjects)}>
