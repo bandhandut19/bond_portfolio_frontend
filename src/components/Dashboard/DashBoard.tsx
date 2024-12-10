@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { TBlog, TProject, TSkill } from "../utils/types";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import { toast } from "react-toastify";
 const DashBoard = () => {
   const {
     handleSubmit: handleSkillSubmit,
@@ -29,7 +29,8 @@ const DashBoard = () => {
         "http://localhost:5000/portfolio/skills/skill",
         data
       );
-      console.log(res);
+      toast.success(res.data.message);
+      console.log(res.data.message);
     } catch (err: any) {
       console.log(err);
     }
@@ -196,12 +197,15 @@ const DashBoard = () => {
               />
             </div>
 
-            <div className="form-control mt-6">
+            <div className="form-control flex gap-3 mt-6">
               <button
                 type="submit"
                 className="btn  bg-[#AB886D] border-none outline-none "
               >
                 <span className="text-black">Add Blog</span>
+              </button>
+              <button className="btn bg-[#AB886D] border-none outline-none  hover:bg-black">
+                <span className="text-white">Modify Blogs</span>
               </button>
             </div>
           </form>
@@ -268,12 +272,15 @@ const DashBoard = () => {
                 {...projectregister("live_url")}
               />
             </div>
-            <div className="form-control mt-6">
+            <div className="form-control mt-6 flex gap-3">
               <button
                 type="submit"
                 className="btn  bg-[#AB886D] border-none outline-none "
               >
                 <span className="text-black">Add Project</span>
+              </button>
+              <button className="btn bg-[#AB886D] border-none outline-none  hover:bg-black">
+                <span className="text-white">Modify Projects</span>
               </button>
             </div>
           </form>
