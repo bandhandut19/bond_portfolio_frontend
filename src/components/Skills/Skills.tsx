@@ -57,7 +57,7 @@ const Skills = () => {
             {softSkills.map((skill: TSkill, index) => (
               <div
                 key={index}
-                className="bg-[#AB886D] py-5 rounded-ss-badge flex flex-col gap-5 font-bold"
+                className="bg-[#AB886D] py-4 rounded flex flex-col gap-1 font-bold"
               >
                 <span className="text-xl text-[#E4E0E1]">{skill.type}</span>
 

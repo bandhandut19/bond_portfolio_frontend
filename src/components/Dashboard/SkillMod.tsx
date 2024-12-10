@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { TSkill } from "../utils/types";
+import { toast } from "react-toastify";
 
 const SkillMod = () => {
   let serialNo = 0;
@@ -67,7 +68,7 @@ const SkillMod = () => {
           `http://localhost:5000/portfolio/skills/skill/${skillId}`
           // "https://bond-porfolio-backend.vercel.app/portfolio/skills/skill/${skillId}"
         );
-        console.log(res);
+        toast.success(res.data.message);
         closeModal();
         fetchSkills();
       } catch (err: any) {

@@ -2,6 +2,7 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 interface FormValues {
   email: string;
@@ -24,8 +25,9 @@ const LoginPage = () => {
 
       if (res.data.data.userAccessToken) {
         localStorage.setItem("userAccessToken", res.data.data.userAccessToken);
+        navigate("/adminpanel");
+        toast.success("Logged In Successfully");
       }
-      navigate("/adminpanel");
     } catch (err: any) {
       console.log(err);
     }
