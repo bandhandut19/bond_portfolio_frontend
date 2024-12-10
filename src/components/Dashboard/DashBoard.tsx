@@ -138,7 +138,7 @@ const DashBoard = () => {
                 onClick={handleViewAllSkill}
                 className="btn bg-[#AB886D] border-none outline-none  hover:bg-black"
               >
-                <span className="text-white">View All Skills</span>
+                <span className="text-white">Modify Skills</span>
               </button>
             </div>
           </form>
