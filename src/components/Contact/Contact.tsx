@@ -4,6 +4,13 @@ const Contact = () => {
       <div className="bg-[#AB886D] text-center lg:text-5xl text-2xl py-10 h-1/4 rounded-b-full text-[#E4E0E1] pt-10 mb-10">
         <span className="font-extrabold">Contact Information</span>
       </div>
+      <div className="flex items-center justify-center">
+        <img
+          className=""
+          src="https://i.postimg.cc/ZnKnHjMQ/towfiqu-barbhuiya-2-Xht5-D22y0-I-unsplash.jpg"
+          alt=""
+        />
+      </div>
       <div className="grid lg:grid-cols-2 lg:gap-10 gap-2 pt-20">
         <div className="bg-[#493628] text-[#E4E0E1]">
           <h1 className="font-bold py-5  px-5">
