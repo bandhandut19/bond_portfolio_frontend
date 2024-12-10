@@ -65,8 +65,8 @@ const SkillMod = () => {
     if (skillId) {
       try {
         const res = await axios.delete(
-          `http://localhost:5000/portfolio/skills/skill/${skillId}`
-          // "https://bond-porfolio-backend.vercel.app/portfolio/skills/skill/${skillId}"
+          // `http://localhost:5000/portfolio/skills/skill/${skillId}`
+          "https://bond-porfolio-backend.vercel.app/portfolio/skills/skill/${skillId}"
         );
         toast.success(res.data.message);
         closeModal();
